@@ -1,12 +1,10 @@
 //Name: Christian Banks
-//Date: 09/29/26
+//Date: 09/42/26
 
 public class Soup {
-    //these are instance variables 
     private String letters;
     private String company;
 
-    //this is a constructor it sets the instance variables (more on this later in the year)
     public Soup(){
         letters ="";
         company = "none";
@@ -53,18 +51,13 @@ public class Soup {
     }
 
 
-    //should remove the first available vowel from letters. If there are no vowels this method has no effect.
-    //precondition: the user has already inputted a word that has been appended to the string letters so that it isnn't empty
-    //postcondition: The program returns the string letters, with the first vowel removed if there is a vowel
+
     public void removeFirstVowel(){
         letters=  letters.replaceFirst("[aeiouAEIOU]", "");
         return letters; 
 
         
     }
-    //precondition: the user inputs a number proceeded by the word num. The user has inputed a word, proceed by the word add that has been added to the string letters so that it isn't empty. 
-    //postcondition: the program returns a new string, which removes num letters from a random spot in the string letters.
-    //should remove "num" letters from a random spot in the string letters. You may assume num never exceeds the length of the string.
     public void removeSome(int num){
        
     //pick a random index such that you're smaller than "num" from the end of letters for example if letters has 10 characters and we want to remove 5 the largest index we want to pick would be 5
